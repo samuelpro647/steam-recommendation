@@ -190,7 +190,7 @@ h1 {
 }
 
 .topicos:hover {
-    animation: glitch 0.25s infinite;
+    animation: glitch 0.100s infinite;
 }
 
 /* Grid dos mods */
