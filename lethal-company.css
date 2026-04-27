@@ -189,7 +189,9 @@ h1 {
     position: relative;
 }
 
-
+.topicos:hover {
+    animation: glitch 0.25s infinite;
+}
 
 /* Grid dos mods */
 .mods-container {
