@@ -189,9 +189,7 @@ h1 {
     position: relative;
 }
 
-.topicos:hover {
-    text-shadow: 0 0 10px #ff4c4c;
-}
+
 
 /* Grid dos mods */
 .mods-container {
