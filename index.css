@@ -21,7 +21,7 @@
     margin-top: 10px;
     color: blue;
 }
-.lethal, .ultrakill, .easy-delivery, .wallpaper-engine {
+.lethal, .ultrakill, .easy-delivery, .misery {
     display: column;
     margin: 20px auto;
     border: none;
@@ -41,8 +41,8 @@
     background-color: #172e6e;
     color: white;
 }
-.wallpaper-engine {
-    background-color: #3c96c0;
+.misery {
+    background-color: #0f3b50;
     color: white;
 }
 
