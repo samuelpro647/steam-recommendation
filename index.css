@@ -1,0 +1,180 @@
+
+
+.titulo_e_subtitulo {
+    background: linear-gradient(90deg, #ff4c4c, #690c0c, #172e6e, #3c96c0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-top: 20px;
+    color: red;
+}
+
+.descrição {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    color: blue;
+}
+.lethal, .ultrakill, .easy-delivery, .wallpaper-engine {
+    display: column;
+    margin: 20px auto;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.lethal {
+    background-color: #ff4c4c;
+    color: white;
+}
+.ultrakill {
+    background-color: #690c0c;
+    color: white;
+}
+.easy-delivery {
+    background-color: #172e6e;
+    color: white;
+}
+.wallpaper-engine {
+    background-color: #3c96c0;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    transform: scale(0.98);
+}
+
+body {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.dark {
+    background-color: #1b2838;
+    color: #c7d5e0;
+}
+
+.sla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.jogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jogo img{
+    width: 650px;
+    max-width: 100%;
+}
+
+@media (max-width: 1000px){
+    .container-jogos{
+        grid-template-columns: 1fr;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.titulo_e_subtitulo {
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.jogo {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.dark .jogo {
+    background: #2a475e;
+}
+
+.jogo:hover {
+    transform: scale(1.03);
+}
+button {
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+body {
+    transition: background 0.3s, color 0.3s;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#modo {
+    position: absolute;
+    opacity: 0;
+}
+
+.toggle {
+    width: 60px;
+    height: 30px;
+    background: #2a475e;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(102,192,244,0.3);
+}
+
+.toggle:hover {
+    box-shadow: 0 0 15px rgba(102,192,244,0.8);
+}
+
+.toggle::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#modo:checked + .toggle {
+    background: #66c0f4;
+}
+
+#modo:checked + .toggle::after {
+    left: 32px;
+}
+
+.icone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.sol { left: 6px; }
+.lua { right: 6px; }
