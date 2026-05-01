@@ -21,14 +21,21 @@
     margin-top: 10px;
     color: blue;
 }
-.lethal, .ultrakill, .easy-delivery, .misery{
-    display: column;
+
+
+
+button.lethal,
+button.ultrakill,
+button.easy-delivery,
+button.misery {
+    display: block;
     margin: 20px auto;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
+
 .lethal {
     background-color: #ff4c4c;
     color: white;
@@ -66,7 +73,7 @@ body {
 
 .sla {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     justify-items: center;
     margin-top: 40px;
@@ -78,13 +85,25 @@ body {
     align-items: center;
 }
 
+.jogo {
+    overflow: hidden;
+}
+
 .jogo img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 10px;
+    padding: 0;
 }
 
 @media (max-width: 1000px){
+    .sla{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
     .sla{
         grid-template-columns: 1fr;
     }
@@ -103,6 +122,27 @@ body {
     padding: 15px;
     border-radius: 15px;
     transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+.jogo-lethal {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 15px rgba(255, 76, 76, 0.4);
+}
+
+.jogo-ultrakill {
+    border-color: #690c0c;
+    box-shadow: 0 0 15px rgba(105, 12, 12, 0.4);
+}
+
+.jogo-easy-delivery {
+    border-color: #172e6e;
+    box-shadow: 0 0 15px rgba(23, 46, 110, 0.4);
+}
+
+.jogo-misery {
+    border-color: #0f3b50;
+    box-shadow: 0 0 15px rgba(15, 59, 80, 0.4);
 }
 
 .dark .jogo {
@@ -110,7 +150,8 @@ body {
 }
 
 .jogo:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
 button {
     border-radius: 10px;
@@ -179,73 +220,3 @@ body {
 
 .sol { left: 6px; }
 .lua { right: 6px; }
-
-/* Tablet */
-@media (max-width: 1000px) {
-    .sla {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 25px;
-    }
-
-    .jogo {
-        width: 90%;
-    }
-
-    .jogo img {
-        width: 100%;
-        height: auto;
-    }
-
-    .titulo {
-        font-size: 30px;
-    }
-}
-
-/* Celular */
-@media (max-width: 600px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .titulo_e_subtitulo {
-        padding: 15px;
-        border-radius: 0;
-    }
-
-    .titulo {
-        font-size: 24px;
-    }
-
-    .descrição {
-        font-size: 15px;
-    }
-
-    .sla {
-        grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 20px;
-    }
-
-    .jogo {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .jogo img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    button {
-        width: 90%;
-        font-size: 15px;
-        padding: 12px;
-    }
-
-    .toggle-container {
-        top: 10px;
-        right: 10px;
-        transform: scale(0.85);
-    }
-}
