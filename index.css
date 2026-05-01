@@ -223,18 +223,13 @@ body {
 
 .jogo {
     position: relative;
-}
-
-.jogo img {
-    width: 100%;
-    display: block;
+    overflow: hidden;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.65);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
