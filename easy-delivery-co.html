@@ -7,15 +7,131 @@
     <link rel="stylesheet" href="easy-delivery-co.css">
 </head>
 <body>
-    <div>
-     <h1 class="titulo">Easy Delivery Co</h1>
-     <h4 class="subtitulo">A incrivel historia de Easy delivery co, é dicas essencias sobre o jogo</h4>
+
+<div class="toggle-container">
+    <input type="checkbox" id="modo">
+    <label for="modo" class="toggle">
+        <span class="icone sol">☀️</span>
+        <span class="icone lua">🌙</span>
+    </label>
+</div>
+    <script>
+const checkbox = document.getElementById("modo");
+
+// Aplicar modo salvo
+if (localStorage.getItem("modo") === "dark") {
+    document.body.classList.add("dark");
+    checkbox.checked = true;
+}
+
+// Evento do botão
+checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("modo", "dark");
+    } else {
+        localStorage.setItem("modo", "light");
+    }
+});
+</script>
+
+   <div class="header">
+    <img class="lado esquerda" src="easy-delivery-co-just-released-a-cozy-horror-driving-game-v0-RsN2prDIHEp6HgSJkJVsOvMF3FJtWqxovCotHUmBrCs.webp">
+
+    <div class="titulo-container">
+        <h1 class="titulo">Easy Delivery Co</h1>
+        <h4 class="subtitulo">
+            A incrivel historia de Easy delivery co, e dicas essencias sobre o jogo
+        </h4>
     </div>
+
+    <img class="lado direita" src="easy-delivery-co-just-released-a-cozy-horror-driving-game-v0-RsN2prDIHEp6HgSJkJVsOvMF3FJtWqxovCotHUmBrCs.webp">
+</div>
 
     <div>
      <p class="topicos">Historia</p>
      <img class="imagem" src="capsule_616x353_alt_assets_0.jpg" alt="easy delivery co" width="500">
-     <p class="p"></p>
+     <p class="p">A historia de Easy Delivery Co a primeira vista parece simples, mas esconde segredos que irar surpreender.</p>
+     <p class="p">a proposta do jogo é simples: entregar incomendas de um local para outro.</p>
+       <p class="p">porem o jogo contem missões secundárias que revela sobre a historia do jogo.</p> 
+     <p class="p">mas o que torna o jogo tão impactante e o fato dos NPCs saberem que estão em um mundo virtual, e que eles querem que você Reseta o jogo.</p>
+        <p class="p">a historia do jogo é meia confusa a primeira vista, e a cada missão secundária que você completa, mais sobre a historia do jogo é revelada.</p>
+        <p class="p">o jogo atualmente contem 3 finais diferentes mais com a mesma proposta de reiniciar o jogo.</p>
+
+        <p class="topicos">Dicas</p>
+        <img class="imagem" src="1760704192477.jpg" alt="easy delivery co" width="500">
+        <p class="p">1. Fique atento as missões secundárias, elas revelam mais sobre a historia do jogo.</p>
+        <p class="p">2. Fique atento as falas dos NPCs, eles podem dar dicas sobre a historia do jogo.</p>
+        <p class="p">3. Antes de passar para outros mundos leve pelo menos R$100 para comprar itens para as missões secundárias.</p>
+        <p class="p">4. Sempre leva pelo menos 1 café, 1 chá, 1 energetico, o café te darar mais energia, o chá te darar um efeito de aquecimento por um tempo, isso ajudar para que vc não morrar congelado, o energetico te darar pouca energia,</p>
+        <p class="p">e pouca energia podera te atrapalhar nas entregas.</p>
+
+        
+        <p class="topicos">Mods</p>
+        <div class="mods-container">
+        <img class="imagem" src="6-1-1071220-52.webp" alt="easy delivery co" width="500">
+        <p class="p">Mods que podem ser instalados para melhorar a experiência de jogo.</p>
+        <p class="p">O easy delivery co tem alguns mods que podem ser úteis para melhorar a experiência de jogo.</p>
+
+         <div class="mod-card">
+            <p class="mod">EasyDeliveryAPI</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/foxfoxfoxgay-EasyDeliveryAPI-1.0.0.png/?width=128&height=128" alt="Easy Delivery Co Mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/foxfoxfoxgay/EasyDeliveryAPI/')">Instalar Mod</button>
+            <p class="p">Mod melhora adiciona mais saves, melhora a configuração do jogo e etc.</p>
+         </div>
+    
+         <div class="mod-card">
+            <p class="mod">Weather Forecast</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/BitBlit-Weather_Forecast-1.0.0.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/BitBlit/Weather_Forecast/')">Instalar Mod</button>
+            <p class="p">O mod informa sobre o clima.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">SebTweaks</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/shiibe-SebTweaks-1.0.4.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/shiibe/SebTweaks/')">Instalar Mod</button>
+            <p class="p">O mod adiciona um sistema de configuração melhorado o jogo, podendo facilita ou dificulta a jogabilidade.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">SebBinds</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/shiibe-SebBinds-1.0.0.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/shiibe/SebBinds/')">Instalar Mod</button>
+            <p class="p">O mod adiciona binds personalizados para melhorar a experiência de jogo.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">SebTruck</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/shiibe-SebTruck-1.0.0.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/shiibe/SebTruck/')">Instalar Mod</button>
+            <p class="p">O mod adiciona Km/h no velocímetro do caminhão, facilitando a visualização da velocidade do caminhão e etc.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">SebLogiWheel</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/shiibe-SebLogiWheel-1.0.0.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/shiibe/SebLogiWheel/')">Instalar Mod</button>
+            <p class="p">O mod adiciona uma compatibilidade com volante para o jogo, assim tendo uma imersão melhor.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">Tweaks</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/qqqbbb-Tweaks-1.3.0.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/qqqbbb/Tweaks/')">Instalar Mod</button>
+            <p class="p">O mod adiciona um sistema de configuração melhorado o jogo.</p>
+         </div>
+
+         <div class="mod-card">
+            <p class="mod">RealTime</p>
+            <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/Laymxd-RealTime-1.3.3.png/?width=128&height=128" alt="Easy Delivery Co mod">
+            <button class="mods" onclick="window.open('https://thunderstore.io/c/easy-delivery-co/p/Laymxd/RealTime/')">Instalar Mod</button>
+            <p class="p">O mod adiciona um sistema de clima em tempo real ao jogo.</p>
+         </div>
+
+        </div>
+
     </div>
 </body>
 </html>
