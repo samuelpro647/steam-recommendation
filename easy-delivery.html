@@ -12,21 +12,7 @@
     <div class="truck">🚚</div>
     <p>Carregando entrega...</p>
 </div>
-
-<script>
-window.addEventListener("load", () => {
-    const loading = document.getElementById("loading");
-
-    setTimeout(() => {
-        loading.style.opacity = "0";
-
-        setTimeout(() => {
-            loading.style.display = "none";
-        }, 500);
-    }, 2000);
-});
-</script>
-
+    
 <div class="toggle-container">
     <input type="checkbox" id="modo">
     <label for="modo" class="toggle">
@@ -152,5 +138,18 @@ checkbox.addEventListener("change", () => {
         </div>
 
     </div>
+    <script>
+window.addEventListener("load", () => {
+    const loading = document.getElementById("loading");
+
+    setTimeout(() => {
+        loading.style.opacity = "0";
+
+        setTimeout(() => {
+            loading.style.display = "none";
+        }, 500);
+    }, 2000);
+});
+</script>
 </body>
 </html>
