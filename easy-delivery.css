@@ -160,18 +160,17 @@ body {
     transition: 0.3s;
 }
 
-.dark {
-    background-color: #1b2838;
+body.dark {
+    background: linear-gradient(180deg, #0f1a2b, #1b2838);
     color: #c7d5e0;
 }
 
-.toggle {
-    width: 60px;
-    height: 30px;
-    background: #444;
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
+#modo:checked + .toggle {
+    background: linear-gradient(135deg, #66c0f4, #4ea1ff);
+}
+
+#modo:checked + .toggle::after {
+    left: 32px;
 }
 
 .toggle::after {
@@ -232,6 +231,12 @@ body {
 }
 
 body {
+    background: #f4f4f4;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
     background: linear-gradient(180deg, #0f1a2b, #1b2838);
     color: #c7d5e0;
 }
