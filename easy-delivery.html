@@ -12,7 +12,21 @@
     <div class="truck">🚚</div>
     <p>Carregando entrega...</p>
 </div>
-    
+
+<script>
+window.addEventListener("load", () => {
+    const loading = document.getElementById("loading");
+
+    setTimeout(() => {
+        loading.style.opacity = "0";
+
+        setTimeout(() => {
+            loading.style.display = "none";
+        }, 500);
+    }, 2000);
+});
+</script>
+
 <div class="toggle-container">
     <input type="checkbox" id="modo">
     <label for="modo" class="toggle">
@@ -65,7 +79,12 @@ checkbox.addEventListener("change", () => {
         <p class="p">o jogo atualmente contem 3 finais diferentes mais com a mesma proposta de reiniciar o jogo.</p>
 
         <p class="topicos">Dicas</p>
-        <img class="imagem" src="1760704192477.jpg" alt="easy delivery co" width="500">
+
+        <div class="dicas-container">
+
+         <img class="gif-dicas" src="ssstwitter.com_1777660326449.gif" alt="Easy Delivery Co GIF">
+
+        </div>
         <p class="p">1. Fique atento as missões secundárias, elas revelam mais sobre a historia do jogo.</p>
         <p class="p">2. Fique atento as falas dos NPCs, eles podem dar dicas sobre a historia do jogo.</p>
         <p class="p">3. Antes de passar para outros mundos leve pelo menos R$100 para comprar itens para as missões secundárias.</p>
@@ -135,21 +154,12 @@ checkbox.addEventListener("change", () => {
             <p class="p">O mod adiciona um sistema de clima em tempo real ao jogo.</p>
          </div>
 
+         <div class="final-imagem">
+          <img src="1759060154_new_Go4O2FxbsAAUN49.jpg" alt="Easy Delivery Co">
+         </div>
+
         </div>
 
     </div>
-    <script>
-window.addEventListener("load", () => {
-    const loading = document.getElementById("loading");
-
-    setTimeout(() => {
-        loading.style.opacity = "0";
-
-        setTimeout(() => {
-            loading.style.display = "none";
-        }, 500);
-    }, 2000);
-});
-</script>
 </body>
 </html>
