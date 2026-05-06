@@ -18,6 +18,53 @@
         <span class="icone lua">🌙</span>
     </label>
 </div>
+
+<div class="translate-container">
+    <button id="translateBtn">🌎 Translate</button>
+</div>
+
+<script>
+const translateBtn = document.getElementById("translateBtn");
+
+let translated = false;
+
+const traducoes = {
+    "Ver detalhes": "View details",
+    "Instalar Mod": "Install Mod",
+    "Dicas": "Tips",
+    "Mods": "Mods",
+    "Historia": "Story",
+    "Aplicativos e jogos recomendados": "Recommended Apps and Games",
+    "Confira os aplicativos e jogos que recomendamos para você!":
+        "Check out the apps and games we recommend for you!"
+};
+
+translateBtn.addEventListener("click", () => {
+
+    translated = !translated;
+
+    document.querySelectorAll("h1,h2,h3,h4,p,button").forEach(el => {
+
+        if (el.id === "translateBtn") return;
+
+        if (!el.dataset.original) {
+            el.dataset.original = el.textContent.trim();
+        }
+
+        const original = el.dataset.original;
+
+        if (translated && traducoes[original]) {
+            el.textContent = traducoes[original];
+        } else {
+            el.textContent = original;
+        }
+    });
+
+    translateBtn.textContent =
+        translated ? "🇧🇷 Português" : "🌎 Translate";
+});
+</script>
+
     <script>
 const checkbox = document.getElementById("modo");
 
@@ -38,6 +85,8 @@ checkbox.addEventListener("change", () => {
     }
 });
 </script>
+
+
 
 <div class="sla">
 
@@ -76,7 +125,7 @@ checkbox.addEventListener("change", () => {
         </button>
     </div>
     </div>
-
 </div>
+
 </body>
 </html>
