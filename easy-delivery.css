@@ -439,3 +439,27 @@ body.dark {
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(78,161,255,0.7);
 }
+
+.translate-container {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#translateBtn {
+    background: linear-gradient(135deg, #4ea1ff, #172e6e);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(78,161,255,0.5);
+}
+
+#translateBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(78,161,255,1);
+}
