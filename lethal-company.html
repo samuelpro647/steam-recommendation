@@ -18,6 +18,10 @@
     </label>
 </div>
 
+<div class="translate-container">
+    <button id="translateBtn">🌎 Translate</button>
+</div>
+
 <div id="intro">
     <video id="introVideo" autoplay muted playsinline>
         <source src="lethal company.mp4" type="video/mp4">
@@ -25,6 +29,72 @@
 
     <button id="skipBtn">SKIP INTRO</button>
 </div>
+
+<script src="lethal-company.js"></script>
+
+<script>
+const translateBtn = document.getElementById("translateBtn");
+let translated = false;
+
+const traducoes = {
+    "Lethal Company": "Lethal Company",
+    "Como funciona o Jogo, Historia, Dicas, Mods": "How the Game Works, Story, Tips, Mods",
+    "Como funciona o jogo Lethal Company": "How Lethal Company Works",
+    "O jogo Lethal Company é um jogo cooperativo ou solo de terro, onde os jogadores assumem o papel de trabalhadores em uma empresa de coleta de recursos.": "Lethal Company is a cooperative or solo horror game where players take the role of workers in a resource collection company.",
+    "O objetivo do jogo é coletar recursos valiosos enquanto enfrenta desafios e perigos que acontecem nas explorações. Os jogadores devem trabalhar juntos para baterem a meta e não serem despedidos.": "The goal is to collect valuable resources while facing dangers during exploration. Players must work together to reach the quota and avoid being fired.",
+    "Dicas": "Tips",
+    "1. Use o ambiente ao seu favor para se esconder ou dispistar de inimigos.": "1. Use the environment to hide or escape from enemies.",
+    "2. Comunique-se com seus colegas de equipe para coordenar ações e evitar situações perigosas.": "2. Communicate with your teammates to coordinate actions and avoid dangerous situations.",
+    "3. Gerencie seus recursos com cuidado e priorize a segurança sobre a ganância.": "3. Manage your resources carefully and prioritize safety over greed.",
+    "4. Esteja atento aos sons e movimentos dos inimigos para detectar ameaças.": "4. Pay attention to sounds and enemy movements to detect threats.",
+    "5. fique atento no Horario": "5. Keep an eye on the time.",
+    "Mods": "Mods",
+    "Existem diversos mods para o jogo Lethal Company, que podem adicionar novos recursos, desafios e personalizações ao jogo. Alguns mods populares incluem:": "There are many mods for Lethal Company that can add new features, challenges and customization to the game.",
+    "Os melhores mods para você jogar no multiplayer são:": "The best mods to play multiplayer are:",
+    "Instalar Mod": "Install Mod",
+    "Mod que permite coloca qualquer coisa menos os corpos na BeltBag do jogo": "Mod that allows you to put anything except bodies in the game's BeltBag",
+    "Adiciona um comando no chat (/sort) para organizar os itens na nave": "Adds a chat command (/sort) to organize items in the ship",
+    "Quando você se teletransporta, o mod permite você fica com seus itens": "When you teleport, the mod allows you to keep your items",
+    "O mod te dara o valor exato se todos os itens na nave": "The mod will give you the exact value of all items in the ship",
+    "Esse mod adiciona um marcador visual no alvo quando você acerta ou causa um dano": "This mod adds a visual marker on the target when you hit or deal damage",
+    "Mod que permite vender os itens sem precisar colocá-los na bancada do chefe": "Mod that allows you to sell items without having to place them on the boss's bench",
+    "Mod que permite pegar os itens a uma distancia maior": "Mod that allows you to pick up items from a greater distance",
+    "Mod que permite configurar os mods baixados": "Mod that allows you to configure downloaded mods",
+    "Mod que adiciona um efeito de brilho nos passos dos jogadores, facilitando a localização dos colegas de equipe em ambientes escuros": "Mod that adds a glow effect to players' footsteps, making it easier to locate teammates in dark environments",
+    "Mod que remove a névoa do jogo, melhorando a visibilidade e permitindo que os jogadores vejam mais claramente o ambiente ao seu redor": "Mod that removes the fog from the game, improving visibility and allowing players to see their surroundings more clearly"
+};
+
+translateBtn.addEventListener("click", () => {
+    translated = !translated;
+
+    document.querySelectorAll("h1, h2, h3, h4, p, button").forEach(el => {
+        if (el.id === "translateBtn") return;
+        if (el.closest("#intro")) return;
+
+        if (!el.dataset.original) {
+            el.dataset.original = el.textContent.trim();
+        }
+
+        const original = el.dataset.original;
+
+        if (translated && traducoes[original]) {
+            el.textContent = traducoes[original];
+
+            if (el.classList.contains("glitch")) {
+                el.setAttribute("data-text", traducoes[original]);
+            }
+        } else {
+            el.textContent = original;
+
+            if (el.classList.contains("glitch")) {
+                el.setAttribute("data-text", original);
+            }
+        }
+    });
+
+    translateBtn.textContent = translated ? "🇧🇷 Português" : "🌎 Translate";
+});
+</script>
 
 <div class="container"></div>
     <p class="subtitulo">Como funciona o Jogo, Historia, Dicas, Mods</p>
@@ -53,65 +123,74 @@
      <p class="nomes">BrokenBags</p> 
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/MillieTheSilly-BrokenBags-0.1.0.png/?width=128&height=128" alt="Lethal Company Mod BrokenBags">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/MillieTheSilly/BrokenBags/', '_blank')">Instalar Mod</button>
+     <p class="p">Mod que permite coloca qualquer coisa menos os corpos na BeltBag do jogo</p>
     </div>
     
     <div>
      <p class="nomes">Scrap Magic</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/KyleTheScientist-Scrap_Magic-1.0.2.png/?width=128&height=128" alt="Lethal Company Mod Scrap Magic">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/KyleTheScientist/Scrap_Magic/', '_blank')">Instalar Mod</button>
+     <p class="p">Adiciona um comando no chat (/sort) para organizar os itens na nave</p>
     </div>
     
     <div>
      <p class="nomes">BetterBetterTeleporter</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/jaramp-BetterBetterTeleporter-1.2.3.png/?width=128&height=128" alt="Lethal Company Mod BetterBetterTeleporter">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/jaramp/BetterBetterTeleporter/', '_blank')">Instalar Mod</button>
+     <p class="p">Quando você se teletransporta, o mod permite você fica com seus itens</p>
     </div>
 
     <div>
      <p class="nomes">ShipLootCruiser</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/HQHQTeam-ShipLootCruiser-1.0.3.png/?width=128&height=128" alt="Lethal Company Mod ShipLootCruiser">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/HQHQTeam/ShipLootCruiser/', '_blank')">Instalar Mod</button>
+     <p class="p">O mod te dara o valor exato se todos os itens na nave</p>
     </div>
 
     <div>
      <p class="nomes">Hitmarker</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/Zehs-Hitmarker-1.2.3.png/?width=128&height=128" alt="Lethal Company Mod Hitmarker">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/Zehs/Hitmarker/', '_blank')">Instalar Mod</button>
+     <p class="p">Esse mod adiciona um marcador visual no alvo quando você acerta ou causa um dano</p>
     </div>
 
     <div>
      <p class="nomes">GrabToSell</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/Nexor-GrabToSell-0.0.5.png/?width=128&height=128" alt="Lethal Company Mod GrabToSell">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/Nexor/GrabToSell/', '_blank')">Instalar Mod</button>
+     <p class="p">Mod que permite vender os itens sem precisar colocá-los na bancada do chefe</p>
     </div>
 
     <div>
      <p class="nomes">InfiniteReach</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/Obsidians_Modding-InfiniteReach-1.0.0.png/?width=128&height=128" alt="Lethal Company Mod InfiniteReach">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/Obsidians_Modding/InfiniteReach/', '_blank')">Instalar Mod</button>
+        <p class="p">Mod que permite pegar os itens a uma distancia maior</p>
     </div>
 
     <div>
      <p class="nomes">LethalConfig</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/AinaVT-LethalConfig-1.4.6.png/?width=128&height=128" alt="Lethal Company Mod LethalConfig">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/AinaVT/LethalConfig/', '_blank')">Instalar Mod</button>
+        <p class="p">Mod que permite configurar os mods baixados</p>
     </div>
 
     <div>
      <p class="nomes">Glow Steps</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/Ozone-Glow_Steps-1.1.2.png/?width=128&height=128" alt="Lethal Company Mod Glow Steps">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/Ozone/Glow_Steps/', '_blank')">Instalar Mod</button>
+        <p class="p">Mod que adiciona um efeito de brilho nos passos dos jogadores, facilitando a localização dos colegas de equipe em ambientes escuros</p>
     </div>
 
     <div>
      <p class="nomes">RemoverOfFog</p>
      <img class="Mods" src="https://thunderstore.io/thumbnail-serve/repository/icons/the_croods-RemoverOfFog-1.0.2.png/?width=128&height=128" alt="Lethal Company Mod RemoverOfFog">
      <button class="mods" onclick="window.open('https://thunderstore.io/c/lethal-company/p/the_croods/RemoverOfFog/', '_blank')">Instalar Mod</button>
+        <p class="p">Mod que remove a névoa do jogo, melhorando a visibilidade e permitindo que os jogadores vejam mais claramente o ambiente ao seu redor</p>
     </div>
 
     </div>
+<script src="lethal-company.js"></script>
 
-    <script src="lethal-company.js"></script>
 </body>
-
 </html>
