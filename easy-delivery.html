@@ -34,6 +34,118 @@ window.addEventListener("load", () => {
         <span class="icone lua">🌙</span>
     </label>
 </div>
+
+<div class="translate-container">
+    <button id="translateBtn">🌎 Translate</button>
+</div>
+
+<script>
+const translateBtn = document.getElementById("translateBtn");
+
+let translated = false;
+
+const traducoes = {
+
+    "Easy Delivery Co":
+        "Easy Delivery Co",
+
+    "A incrivel historia de Easy delivery co, e dicas essencias sobre o jogo":
+        "The incredible story of Easy Delivery Co and essential tips about the game",
+
+    "Historia":
+        "Story",
+
+    "Dicas":
+        "Tips",
+
+    "Mods":
+        "Mods",
+
+    "Carregando entrega...":
+        "Loading delivery...",
+
+    "A historia de Easy Delivery Co a primeira vista parece simples, mas esconde segredos que irar surpreender.":
+        "The story of Easy Delivery Co may seem simple at first, but it hides secrets that will surprise you.",
+
+    "a proposta do jogo é simples: entregar incomendas de um local para outro.":
+        "The game's objective is simple: deliver packages from one place to another.",
+
+    "porem o jogo contem missões secundárias que revela sobre a historia do jogo.":
+        "However, the game contains side missions that reveal more about the story.",
+
+    "mas o que torna o jogo tão impactante e o fato dos NPCs saberem que estão em um mundo virtual, e que eles querem que você Reseta o jogo.":
+        "What makes the game impactful is that the NPCs know they are in a virtual world and want you to reset the game.",
+
+    "o jogo atualmente contem 3 finais diferentes mais com a mesma proposta de reiniciar o jogo.":
+        "The game currently has 3 different endings, all with the same idea of restarting the game.",
+
+    "1. Fique atento as missões secundárias, elas revelam mais sobre a historia do jogo.":
+        "1. Pay attention to side missions, they reveal more about the story.",
+
+    "2. Fique atento as falas dos NPCs, eles podem dar dicas sobre a historia do jogo.":
+        "2. Listen carefully to NPC dialogues, they may give clues about the story.",
+
+    "3. Antes de passar para outros mundos leve pelo menos R$100 para comprar itens para as missões secundárias.":
+        "3. Before traveling to other worlds, bring at least R$100 to buy items for side missions.",
+
+    "Mods que podem ser instalados para melhorar a experiência de jogo.":
+        "Mods that can be installed to improve the gameplay experience.",
+
+    "Instalar Mod":
+        "Install Mod",
+    "O easy delivery co tem alguns mods que podem ser úteis para melhorar a experiência de jogo.":
+        "Easy Delivery Co has some mods that can be useful to enhance the gaming experience.",
+    "Mod melhora adiciona mais saves, melhora a configuração do jogo e etc.":
+        "This mod adds more saves, improves game configuration, etc.",
+    "O mod informa sobre o clima.":
+        "This mod provides weather information.",
+    "O mod adiciona um sistema de configuração melhorado o jogo, podendo facilita ou dificulta a jogabilidade.":
+        "This mod adds an improved configuration system to the game, which can make gameplay easier or harder.",
+    "O mod adiciona binds personalizados para melhorar a experiência de jogo.":
+        "This mod adds custom keybinds to enhance the gaming experience.",
+    "O mod adiciona Km/h no velocímetro do caminhão, facilitando a visualização da velocidade do caminhão e etc.":
+        "This mod adds Km/h to the truck's speedometer, making it easier to see the truck's speed, etc.",
+    "O mod adiciona uma compatibilidade com volante para o jogo, assim tendo uma imersão melhor.":
+        "This mod adds steering wheel compatibility to the game, providing better immersion.",
+    "O mod adiciona um sistema de clima em tempo real ao jogo.":
+        "This mod adds a real-time weather system to the game.",
+    "O mod adiciona um sistema de configuração melhorado o jogo.":
+        "This mod adds an improved configuration system to the game.",
+    "4. Sempre leva pelo menos 1 café, 1 chá, 1 energetico, o café te darar mais energia, o chá te darar um efeito de aquecimento por um tempo, isso ajudar para que vc não morrar congelado, o energetico te darar pouca energia, e pouca energia podera te atrapalhar nas entregas.":
+        "4. Always bring at least 1 coffee, 1 tea, and 1 energy drink. Coffee will give you more energy, tea will provide a warming effect for a while to help prevent freezing to death, and the energy drink gives you a small boost of energy, which can be crucial for deliveries.",
+    "a historia do jogo é meia confusa a primeira vista, e a cada missão secundária que você completa, mais sobre a historia do jogo é revelada.":
+        "The game's story can be a bit confusing at first, and with each side mission you complete, more about the story is revealed."
+};
+
+translateBtn.addEventListener("click", () => {
+
+    translated = !translated;
+
+    document.querySelectorAll("h1, h2, h3, h4, p, button").forEach(el => {
+
+        if (el.id === "translateBtn") return;
+
+        if (!el.dataset.original) {
+            el.dataset.original = el.textContent.trim();
+        }
+
+        const original = el.dataset.original;
+
+        if (translated && traducoes[original]) {
+
+            el.textContent = traducoes[original];
+
+        } else {
+
+            el.textContent = original;
+        }
+    });
+
+    translateBtn.textContent =
+        translated ? "🇧🇷 Português" : "🌎 Translate";
+});
+</script>
+
     <script>
 const checkbox = document.getElementById("modo");
 
@@ -88,8 +200,7 @@ checkbox.addEventListener("change", () => {
         <p class="p">1. Fique atento as missões secundárias, elas revelam mais sobre a historia do jogo.</p>
         <p class="p">2. Fique atento as falas dos NPCs, eles podem dar dicas sobre a historia do jogo.</p>
         <p class="p">3. Antes de passar para outros mundos leve pelo menos R$100 para comprar itens para as missões secundárias.</p>
-        <p class="p">4. Sempre leva pelo menos 1 café, 1 chá, 1 energetico, o café te darar mais energia, o chá te darar um efeito de aquecimento por um tempo, isso ajudar para que vc não morrar congelado, o energetico te darar pouca energia,</p>
-        <p class="p">e pouca energia podera te atrapalhar nas entregas.</p>
+        <p class="p">4. Sempre leva pelo menos 1 café, 1 chá, 1 energetico, o café te darar mais energia, o chá te darar um efeito de aquecimento por um tempo, isso ajudar para que vc não morrar congelado, o energetico te darar pouca energia, e pouca energia podera te atrapalhar nas entregas.</p>
 
         
         <p class="topicos">Mods</p>
@@ -161,5 +272,6 @@ checkbox.addEventListener("change", () => {
         </div>
 
     </div>
+
 </body>
 </html>
