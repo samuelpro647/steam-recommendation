@@ -190,7 +190,7 @@ h1 {
 }
 
 .topicos:hover {
-    animation: glitch 0.100s infinite;
+    animation: glitch 0.3s infinite;
 }
 
 /* Grid dos mods */
@@ -357,4 +357,28 @@ h1 {
     background: #ff4c4c;
     transform: scale(1.08);
     box-shadow: 0 0 20px rgba(255,0,0,0.8);
+}
+
+.translate-container {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#translateBtn {
+    background: linear-gradient(135deg, #ff4c4c, #690c0c);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255,76,76,0.5);
+}
+
+#translateBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255,76,76,1);
 }
