@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Misery</title>
+    <link rel="stylesheet" href="misery.css">
 </head>
 <body>
+
+    <div class="toggle-container">
+     <input type="checkbox" id="modo">
+     <label for="modo" class="toggle">
+        <span class="icone sol">☀️</span>
+        <span class="icone lua">🌙</span>
+     </label>
+    </div>
     
+    <script>
+const checkbox = document.getElementById("modo");
+
+if (localStorage.getItem("modo") === "dark") {
+    document.body.classList.add("dark");
+    checkbox.checked = true;
+}
+
+checkbox.addEventListener("change", () => {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("modo", "dark");
+    } else {
+        localStorage.setItem("modo", "light");
+    }
+});
+</script>
+
+
+    <h1 class="titulo">Misery</h1>
+    <h3 class="subtitulo">O jogo desconhecido</h3>
+        <p class="subtitulo">Um jogo de sobrevivência e horror psicológico</p>
+    <img class="content" src="capsule_616x353 (1).jpg" alt="Imagem do jogo Misery" width="616" height="353">
+    <p class="p">Misery é um jogo de sobrevivência e horror psicológico desenvolvido por um estúdio independente. O jogo se passa em um mundo pós-apocalíptico onde os jogadores devem enfrentar desafios constantes para sobreviver. Com uma atmosfera sombria e tensa, Misery oferece uma experiência imersiva e desafiadora.</p>
+    <p class="p">o jogo se passa em um mundo pós-apocalíptico onde o jogo não deixa muito claro oque aconteceu no jogo. pois ao iniciar o jogador é colocado em uma casa onde tem 60 segundos para coletar o maximo de itens na casa.</p>
+    <p class="p">o jogo não revela muitos detalhes sobre sua história, mantendo um clima de mistério e suspense ao longo da jogatina.</p>
+    <img class="content" src="content.png" alt="Imagem do jogo Misery" width="616" height="353">
+    <p class="subtitulo">Historia</p>
+    <p class="p">a lore de “MISERY”, mostrando como a região fictícia de Soslovye foi destruída após uma guerra nuclear ligada a anomalias misteriosas estudadas pelo instituto secreto CERZES. Essas anomalias criavam artefatos com propriedades sobrenaturais, atraindo o interesse militar de vários países.</p>
+    <p class="p">Quando uma bomba nuclear atingiu a região, ela reagiu de forma inesperada com as anomalias, distorcendo espaço, radiação e realidade. O governo entrou em colapso, cidades foram destruídas e sobreviventes ficaram presos em uma “zona de exclusão” cheia de criaturas mutantes, fenômenos inexplicáveis e áreas que mudavam sozinhas.</p>
+    <p class="p">Com o tempo, surgiram teorias de que a bomba não destruiu as anomalias, mas se sincronizou com elas, fazendo a zona parecer viva e adaptativa. Caminhos mudam, ruínas se reorganizam e transmissões antigas voltam a tocar como se a região tivesse consciência própria. A explosão não foi o fim, mas o começo de algo muito pior.</p>
+
+    <div class="steam-widget">
+    <div class="steam-logo">◎</div>
+
+    <h2>Comprar <strong>MISERY</strong> <span>no Steam</span></h2>
+
+    <div class="steam-content">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2119830/9ac5fcd5ec0de485a101d31385aeb4c7ca6fdbd5/capsule_184x69.jpg">
+
+        <p>
+            MISERY é um jogo de sobrevivência cooperativo para 1 a 10 jogadores em uma zona nuclear.
+            Vasculhe ruínas radioativas em busca de recursos, construa um bunker, crie armas e explore
+            o mundo gerado proceduralmente com seus amigos.
+        </p>
+    </div>
+
+    <div class="steam-bottom">
+        <div class="platforms">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
+</div>
+
+        <div class="buy-area">
+            <span class="price">R$ 39,99</span>
+            <a href="https://store.steampowered.com/app/2119830/MISERY/" target="_blank">
+                Comprar no Steam
+            </a>
+        </div>
+    </div>
+</div>
+	
+</div>
+
 </body>
 </html>
