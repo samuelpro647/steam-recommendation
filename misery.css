@@ -1,0 +1,225 @@
+
+body {
+    background: #f4f4f4;
+    color: #111;
+    transition: background 0.4s ease, color 0.4s ease;
+    font-family: Arial, sans-serif;
+}
+
+body.dark {
+    background:
+    linear-gradient(180deg, #05080d, #111927, #1b2838);
+
+    color: #d6e2ee;
+}
+
+/* BOTÃO */
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#modo {
+    display: none;
+}
+
+.toggle {
+    width: 65px;
+    height: 32px;
+    background: #2a475e;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(102,192,244,0.4);
+}
+
+.toggle:hover {
+    box-shadow: 0 0 20px rgba(102,192,244,0.9);
+}
+
+.toggle::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#modo:checked + .toggle {
+    background: linear-gradient(135deg, #66c0f4, #4ea1ff);
+}
+
+#modo:checked + .toggle::after {
+    left: 35px;
+}
+
+.icone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.sol {
+    left: 7px;
+}
+
+.lua {
+    right: 7px;
+}
+
+/* CARDS */
+
+.p {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid #2a475e;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 15px auto;
+    max-width: 850px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    line-height: 1.6;
+}
+
+/* IMAGENS */
+
+.content {
+    display: block;
+    margin: 25px auto;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(42,44,107,0.5);
+    transition: 0.3s;
+}
+
+.content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(42,44,107,0.9);
+}
+
+/* TÍTULOS */
+
+.titulo {
+    text-align: center;
+    color: #4ea1ff;
+    font-size: 42px;
+    text-shadow: 0 0 15px rgba(78,161,255,0.7);
+}
+
+.subtitulo {
+    text-align: center;
+    color: #1d2a38;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+body.dark .subtitulo {
+    color: #9fbad0;
+}
+
+.steam-widget {
+    max-width: 720px;
+    margin: 50px auto;
+    background: #303946;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+    color: #dfe3ea;
+    box-shadow: 0 0 18px rgba(0,0,0,0.6);
+}
+
+.steam-logo {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 34px;
+    color: #9aa3ad;
+}
+
+.steam-widget h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: white;
+}
+
+.steam-widget h2 span {
+    color: #9aa3ad;
+    font-weight: normal;
+}
+
+.steam-content {
+    display: flex;
+    gap: 14px;
+}
+
+.steam-content img {
+    width: 184px;
+    height: 69px;
+    object-fit: cover;
+}
+
+.steam-content p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #d4d8df;
+}
+
+.steam-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 12px;
+}
+
+.platforms {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.platforms img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.platforms img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.buy-area {
+    display: flex;
+}
+
+.price {
+    background: #050505;
+    color: white;
+    padding: 12px 18px;
+}
+
+.buy-area a {
+    background: #6aa51a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 2px solid #111;
+}
+
+.buy-area a:hover {
+    background: #7cc51f;
+}
