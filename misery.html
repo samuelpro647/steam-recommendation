@@ -21,6 +21,81 @@
      </label>
     </div>
     
+    <div class="translate-container">
+     <button id="translateBtn">🌎 Translate</button>
+    </div>
+
+    <script>
+const translateBtn = document.getElementById("translateBtn");
+
+let translated = false;
+
+const traducoes = {
+
+    "O jogo desconhecido":
+        "The Unknown Game",
+
+    "Um jogo de sobrevivência e horror psicológico":
+        "A survival and psychological horror game",
+
+    "Historia":
+        "Story",
+
+    "Comprar":
+        "Buy",
+
+    "Comprar no Steam":
+        "Buy on Steam",
+
+    "Misery é um jogo de sobrevivência e horror psicológico desenvolvido por um estúdio independente. O jogo se passa em um mundo pós-apocalíptico onde os jogadores devem enfrentar desafios constantes para sobreviver. Com uma atmosfera sombria e tensa, Misery oferece uma experiência imersiva e desafiadora.":
+        "Misery is a survival and psychological horror game developed by an independent studio. The game takes place in a post-apocalyptic world where players must face constant challenges to survive. With a dark and tense atmosphere, Misery offers an immersive and challenging experience.",
+
+    "o jogo se passa em um mundo pós-apocalíptico onde o jogo não deixa muito claro oque aconteceu no jogo. pois ao iniciar o jogador é colocado em uma casa onde tem 60 segundos para coletar o maximo de itens na casa.":
+        "The game takes place in a post-apocalyptic world where it is not very clear what happened. At the beginning, the player is placed inside a house and has 60 seconds to collect as many items as possible.",
+
+    "o jogo não revela muitos detalhes sobre sua história, mantendo um clima de mistério e suspense ao longo da jogatina.":
+        "The game does not reveal many details about its story, maintaining an atmosphere of mystery and suspense throughout gameplay.",
+
+    "a lore de “MISERY”, mostrando como a região fictícia de Soslovye foi destruída após uma guerra nuclear ligada a anomalias misteriosas estudadas pelo instituto secreto CERZES. Essas anomalias criavam artefatos com propriedades sobrenaturais, atraindo o interesse militar de vários países.":
+        "The lore of MISERY shows how the fictional region of Soslovye was destroyed after a nuclear war linked to mysterious anomalies studied by the secret institute CERZES. These anomalies created artifacts with supernatural properties, attracting military interest from several countries.",
+
+    "Quando uma bomba nuclear atingiu a região, ela reagiu de forma inesperada com as anomalias, distorcendo espaço, radiação e realidade. O governo entrou em colapso, cidades foram destruídas e sobreviventes ficaram presos em uma “zona de exclusão” cheia de criaturas mutantes, fenômenos inexplicáveis e áreas que mudavam sozinhas.":
+        "When a nuclear bomb hit the region, it reacted unexpectedly with the anomalies, distorting space, radiation and reality. The government collapsed, cities were destroyed and survivors became trapped inside an exclusion zone full of mutant creatures and unexplained phenomena.",
+
+    "Com o tempo, surgiram teorias de que a bomba não destruiu as anomalias, mas se sincronizou com elas, fazendo a zona parecer viva e adaptativa. Caminhos mudam, ruínas se reorganizam e transmissões antigas voltam a tocar como se a região tivesse consciência própria. A explosão não foi o fim, mas o começo de algo muito pior.":
+        "Over time, theories emerged that the bomb did not destroy the anomalies, but synchronized with them, making the zone seem alive and adaptive. Paths change, ruins reorganize and old transmissions start playing again as if the region had its own consciousness. The explosion was not the end, but the beginning of something much worse."
+};
+
+translateBtn.addEventListener("click", () => {
+
+    translated = !translated;
+
+    document.querySelectorAll("h1,h2,h3,h4,p,a,button,span")
+    .forEach(el => {
+
+        if (el.id === "translateBtn") return;
+
+        if (!el.dataset.original) {
+            el.dataset.original = el.textContent.trim();
+        }
+
+        const original = el.dataset.original;
+
+        if (translated && traducoes[original]) {
+
+            el.textContent = traducoes[original];
+
+        } else {
+
+            el.textContent = original;
+        }
+    });
+
+    translateBtn.textContent =
+    translated ? "🇧🇷 Português" : "🌎 Translate";
+});
+</script>
+
     <script>
 const checkbox = document.getElementById("modo");
 
